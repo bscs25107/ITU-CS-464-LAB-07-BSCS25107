@@ -7,6 +7,7 @@ public class ScreenManager : MonoBehaviour
     public static ScreenManager I;
     public UIScreen[] screens;
     public string startScreen = "Title";
+    public CRTOverlay crt;
 
     Dictionary<string, UIScreen> map = new Dictionary<string, UIScreen>();
     Stack<UIScreen> history = new Stack<UIScreen>();
@@ -23,7 +24,6 @@ public class ScreenManager : MonoBehaviour
 
     void Update()
     {
-        // Android hardware back
         if (Input.GetKeyDown(KeyCode.Escape)) Back();
     }
 
@@ -39,7 +39,6 @@ public class ScreenManager : MonoBehaviour
         StartCoroutine(BackRoutine());
     }
 
-    // Clears history, used by "Main Menu" from Results/Pause
     public void GoRoot(string name)
     {
         if (busy || !map.ContainsKey(name)) return;
@@ -59,6 +58,7 @@ public class ScreenManager : MonoBehaviour
     {
         busy = true;
         history.Push(current);
+        if (crt != null) crt.Burst(next.isOverlay ? 0.15f : 0.28f, next.isOverlay ? 0.25f : 0.35f);
         if (!next.isOverlay) yield return current.Out(1f);
         current = next;
         yield return next.In(1f);
@@ -70,6 +70,7 @@ public class ScreenManager : MonoBehaviour
         busy = true;
         var prev = history.Pop();
         bool wasOverlay = current.isOverlay;
+        if (crt != null) crt.Burst(wasOverlay ? 0.15f : 0.28f, wasOverlay ? 0.25f : 0.35f);
         yield return current.Out(-1f);
         current = prev;
         if (!wasOverlay) yield return prev.In(-1f);
@@ -79,7 +80,7 @@ public class ScreenManager : MonoBehaviour
     IEnumerator RootRoutine(UIScreen root)
     {
         busy = true;
-        // hide any overlays/screens still visible
+        if (crt != null) crt.Burst();
         foreach (var s in screens)
             if (s != root && s.gameObject.activeSelf) yield return s.Out(1f);
         current = root;
