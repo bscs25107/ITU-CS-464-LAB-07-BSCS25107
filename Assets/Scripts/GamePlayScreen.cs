@@ -29,4 +29,9 @@ public class GamePlayScreen : MonoBehaviour
     {
         scoreText.text = "SIGNAL " + Mathf.FloorToInt(score).ToString("000");
     }
+    public void Finish()
+    {
+        GameSession.score = Mathf.FloorToInt(score);
+        ScreenManager.I.Open("Results");
+    }
 }

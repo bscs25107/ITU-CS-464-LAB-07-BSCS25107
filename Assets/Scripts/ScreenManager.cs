@@ -86,4 +86,27 @@ public class ScreenManager : MonoBehaviour
         yield return root.In(-1f);
         busy = false;
     }
+    public void Rewind(string name)   // history me peechhe ja kar us screen tak
+    {
+        if (busy || !map.ContainsKey(name)) return;
+        if (!history.Contains(map[name]))
+        {
+            Debug.LogWarning("Rewind: " + name + " history me nahi hai");
+            return;
+        }
+        StartCoroutine(RewindRoutine(map[name]));
+    }
+
+    IEnumerator RewindRoutine(UIScreen target)
+    {
+        busy = true;
+        if (crt != null) crt.Burst();
+        while (history.Peek() != target) history.Pop();
+        history.Pop();                                  // target ab current banega
+        foreach (var s in screens)
+            if (s != target && s.gameObject.activeSelf) yield return s.Out(-1f);
+        current = target;
+        yield return target.In(-1f);
+        busy = false;
+    }
 }
