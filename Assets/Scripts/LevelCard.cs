@@ -84,4 +84,4 @@ public class LevelCard : MonoBehaviour
         rt.anchoredPosition = start;
         shake = null;
     }
-}
+};

@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class UIScreen : MonoBehaviour
 {
+    public bool handlesEscape;   // true = ye screen khud Escape sambhalti hai
     public RectTransform panel;     // the stretched child
     public bool isOverlay;          // true for Pause
     CanvasGroup cg;

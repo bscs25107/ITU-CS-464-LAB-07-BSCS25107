@@ -20,6 +20,7 @@ public class ModeCard : MonoBehaviour
 
     void OnClick()
     {
+        Debug.Log("ModeCard click: " + modeName + " -> " + targetScreen + " locked=" + locked);
         if (locked) { Shake(); return; }
         GameSession.mode = modeName;
         ScreenManager.I.Open(targetScreen);

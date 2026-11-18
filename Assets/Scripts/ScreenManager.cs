@@ -21,18 +21,17 @@ public class ScreenManager : MonoBehaviour
     }
 
     void Start() { StartCoroutine(Show(map[startScreen], 1f)); }
-
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) Back();
+        if (Input.GetKeyDown(KeyCode.Escape) && current != null && !current.handlesEscape)
+            Back();
     }
-
     public void Open(string name)
     {
-        if (busy || !map.ContainsKey(name)) return;
+        if (busy) { Debug.Log("ScreenManager busy, ignored: " + name); return; }
+        if (!map.ContainsKey(name)) { Debug.LogWarning("Screen not found: " + name); return; }
         StartCoroutine(OpenRoutine(map[name]));
     }
-
     public void Back()
     {
         if (busy || history.Count == 0) return;
