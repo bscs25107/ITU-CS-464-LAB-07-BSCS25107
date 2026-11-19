@@ -19,8 +19,7 @@
 | **Logo slide and fade** |0.6s | 	OutCubic|Calm, technical arrival, no bounc |
 | **Tagline fade** |0.4s | OutCubic | Reads after the logo |
 | **Prompt pulse** |0.5 Hz | - | Idle invitation to tap, slow enough to avoid flashing |
-
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/1.jpeg" width="240">
 <img src="Docs/1bw.jpeg" width="240">
@@ -44,7 +43,7 @@ nothing changed ^u^
 | **Button press / release** |0.08 s / 0.25 s | OutBack |Immediate feedback, then a springy release |
 | **Signal bars fill** |	2.8 s loop | OutCubic |Idle state shows "searching" and connects to the theme |
 | **Screen change** |0.4 s in, 0.25 s out, static burst 0.35 s | OutBack | Consistent transition language |
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/2.jpeg" width="240">
 <img src="Docs/2bw.jpeg" width="240">
