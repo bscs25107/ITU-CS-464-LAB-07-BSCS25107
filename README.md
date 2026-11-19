@@ -123,16 +123,13 @@ nothing changed ^u^
 ## SCREEN NO. 10
 - **Screen:** Credits
 - **Principles and Techniques:**
- | Principle | Implementation |
 | :--- | :--- |
 | **Hierarchy** | Game title, section headings, and body text are differentiated using distinct font sizes, typefaces, and opacity levels. |
 | **Gestalt (Proximity)** | Each heading and its corresponding text are grouped into distinct sections separated by clear spacing. |
 | **Common Region** | Scrolling text is clipped by a UI mask so it remains contained and never overlaps with the main heading. |
 | **No Dead Ends** | Every screen includes an accessible Back button to ensure clear navigation. |
 | **To The Point** | The credits screen strictly displays essential contributor information without unnecessary clutter. |
-
-### The Tweens and Ease Curves
-
+- **The Tweens and Ease Curves**
 | Tween | Duration / Speed | Ease | Reason |
 | :--- | :--- | :--- | :--- |
 | **Credit Scroll** | Till the text ends at speed 110 *(changeable)* | **Linear** | Constant speed is easiest to read |
