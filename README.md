@@ -106,19 +106,26 @@
 - *Reason:* 
 
 <p>
-<img src="Docs/8.jpeg" width="240">
-<img src="Docs/8bw.jpeg" width="240">
+<img src="Docs/9.jpeg" width="240">
+<img src="Docs/9bw.jpeg" width="240">
 </p>
 
 ## SCREEN NO. 10
 - **Screen:** Credits
-- **Principles:** 
-- **Techniques:**
-- **The Tweens/Ease Curves:** 
-- *Reason:* 
+- **Principles and Techniques:**
+  |Hierarchy|Game name, Section headings, Body texts with different size, fonts and opacity|
+  |Getalt|Each heading/texts has there own sections with spaces among each|
+  |Common Region| The scrolling text is clipped by a mask so that it never overlaps with the main heading.|
+  |No Dead End| Back button every screen|
+  |To The Point|Only credits are listed, only showing what is needed.|
+- **The Tweens and Ease Curves:**
+  |Tween|Ease|reason|
+  |Credit Scroll till the texts ends at speed 110(changeable)|Linear|Constant speed is easiest to read|
+  |Endcard fade in for about 0.6s|OutCubic|Clear signal that the list has finished|
+  |Screen Change|0.4 s in, 0.25 s out|OutCubic / InCubic|Consistent transition language|
 
 <p>
-<img src="Docs/8.jpeg" width="240">
-<img src="Docs/8bw.jpeg" width="240">
+<img src="Docs/10.jpeg" width="240">
+<img src="Docs/10bw.jpeg" width="240">
 </p>
 
