@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class CRTOverlay : MonoBehaviour
 {
+    bool effectsOn = true;
     public RawImage scanlines, vignette, noise;
     public RectTransform shakeTarget;            // SafeArea drag karo
     [Range(0f, 1f)] public float scanlineAlpha = 0.14f;
@@ -45,10 +46,18 @@ public class CRTOverlay : MonoBehaviour
     // Screen change pe call hota hai
     public void Burst(float peak = 0.28f, float dur = 0.35f)
     {
+        if (!effectsOn) return;
         if (burst != null) StopCoroutine(burst);
         burst = StartCoroutine(BurstRoutine(Mathf.Min(peak, 0.3f), dur));
     }
-
+    public void SetEffects(bool on)
+    {
+        effectsOn = on;
+        scanlines.gameObject.SetActive(on);
+        vignette.gameObject.SetActive(on);
+        noise.gameObject.SetActive(on);
+        if (!on && shakeTarget != null) shakeTarget.anchoredPosition = Vector2.zero;
+    }
     IEnumerator BurstRoutine(float peak, float dur)
     {
         yield return Tween.Run(dur, Ease.OutCubic, t =>
