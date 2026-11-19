@@ -932,7 +932,7 @@ PlayerSettings:
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: ITU-CS-464-LAB-7-BSCS25107
-  organizationId: 
+  organizationId: bscs25107
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
