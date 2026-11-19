@@ -14,8 +14,11 @@
 ### The Tweens and Ease Curves
 | Tween | Duration / Speed | Ease | Reason |
 | :--- | :--- | :--- | :--- |
-| **Cards stagger in** |0.35 s, 0.05 s apart|OutBack|	Reading order and a lively entrance |
-| **Press feedback** |0.08 s / 0.25 s | OutBack | Standard button feedback |
+| **Status fade in** |0.3s |OutCubbic|Establishes the "no signal" state first |
+| **Signal-lock static burst** |0.3 s | 	OutCubic | Marks the moment the signal is found |
+| **Logo slide and fade** |0.6s | 	OutCubic|Calm, technical arrival, no bounc |
+| **Tagline fade** |0.4s | OutCubic | Reads after the logo |
+| **Prompt pulse** |0.5 Hz | - | Idle invitation to tap, slow enough to avoid flashing |
 
 
 <p>
@@ -63,8 +66,7 @@ nothing changed ^u^
 | **Staggered IN** | 0.35 s, 0.05 s apart| OutBack|Entering from the right signals forward movement |
 | **Locked card shake** | 0.4 s | OutCubic |A horizontal shake is a universal "no", and it settles quickly |
 | **Press feedback** | 0.25 s | OutCubic | Standard button feedback |
-
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/3.jpeg" width="240">
 <img src="Docs/3bw.jpeg" width="240">
@@ -86,8 +88,7 @@ nothing changed ^u^
 | :--- | :--- | :--- | :--- |
 | **Cards stagger in** |0.35 s, 0.05 s apart|OutBack|	Reading order and a lively entrance |
 | **Press feedback** |0.08 s / 0.25 s | OutBack | Standard button feedback |
-
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/4.jpeg" width="240">
 <img src="Docs/4bw.jpeg" width="240">
@@ -110,7 +111,7 @@ nothing changed ^u^
 | **Stat bars change** |0.35 s |OutCubic |Moves from the old value to the new one, so the difference is felt |
 | **Cards and panel stagger in** | 0.35 s, 0.05 s apart | OutBack |	Reading order |
 | **Press feedback** |0.08 s / 0.25 s |OutCubic / OutBack | Standard button feedback |
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/5.jpeg" width="240">
 <img src="Docs/5bw.jpeg" width="240">
@@ -134,7 +135,7 @@ nothing changed ^u^
 | **Bars pop in one by one** | 0.3 s each, 0.15 s apart | OutCubic |The reward arrives piece by piece |
 | **Currency count-up** | 0.5 s | OutCubic | Shows the reward being addede |
 | **Items stagger in** | 0.35 s, 0.05 s apart | OutBack | Reading order |
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/6.jpeg" width="240">
 <img src="Docs/6bw.jpeg" width="240">
@@ -159,7 +160,7 @@ nothing changed ^u^
 | **Box rises from below** | 0.3 s| OutBack |	It appears over the game rather than replacing it|
 | **Exit** | 0.25 s | 	InCubic |Fast exit so the game resumes quickly|
 | **Press feedback** | 0.25 s |OutCubic / OutBack |Works while paused because it uses unscaled time|
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/7.jpeg" width="240">
 <img src="Docs/7bw.jpeg" width="240">
@@ -184,7 +185,7 @@ nothing changed ^u^
 | **Purchased card stamp** | 0.35 s | 	OutBack | Confirms the purchase |
 | **Denial shake when too poor** | 0.4 s | OutCubic decay |Clear visual "cannot do that" |
 | **Cards stagger in** | 0.35 s, 0.05 s apart | OutBack |Reading order |
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/8.jpeg" width="240">
 <img src="Docs/8bw.jpeg" width="240">
@@ -207,7 +208,7 @@ nothing changed ^u^
 | **Toggle knob slide and track colour** | 0.2 s | OutCubic |Fast and visible response to a binary choice|
 | **Items stagger in** | 0.35 s, 0.05 s apart | OutBack |Reading order|
 | **Static burst on screen change** |0.35 s | OutCubic | Can be disabled by the CRT Effects setting|
-
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/9.jpeg" width="240">
 <img src="Docs/9bw.jpeg" width="240">
@@ -230,6 +231,7 @@ nothing changed ^u^
 | **Credit Scroll** | Till the text ends at speed 110 *(changeable)* | Linear | Constant speed is easiest to read |
 | **Endcard Fade-In** | ~0.6s | OutCubic | Clear signal that the list has finished |
 | **Screen Change** | 0.4s in, 0.25s out | OutCubic / InCubic | Consistent transition language |
+### Colour and Black&White Screenshots 
 <p>
 <img src="Docs/10.jpeg" width="240">
 <img src="Docs/10bw.jpeg" width="240">
